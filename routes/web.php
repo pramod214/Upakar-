@@ -20,4 +20,12 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::match(['get','post'],'/adminlogin','AdminController@login')->name('admin.login');
 
+Route::group(['middleware'=>['auth']],function(){
+    Route::get('/admin-dashboard','AdminController@dashboard')->name('admin.dashboard');
+    Route::get('/adminprofile/{id}','AdminController@profile')->name('admin.profile');
+    Route::post('/adminupdate/{id}','AdminController@update')->name('admin.update');
+});
+
+Route::get('/logout','AdminController@logout')->name('admin.logout');
+
 
