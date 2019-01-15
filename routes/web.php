@@ -11,9 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/','FrontEndController@index')->name('front.index');
+Route::get('/about','FrontEndController@about')->name('front.about');
+Route::get('/projects','FrontEndController@projects')->name('front.projects');
+Route::get('/news&events','FrontEndController@news')->name('front.news&events');
+Route::get('/notice','FrontEndController@notice')->name('front.notice');
+Route::get('/photogallery','FrontEndController@photogallery')->name('front.photogallery');
+Route::get('/contact','FrontEndController@contact')->name('front.contact');
+Route::get('/donate','FrontEndController@donate')->name('front.donate');
 
 Auth::routes();
 
