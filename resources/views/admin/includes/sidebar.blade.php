@@ -44,14 +44,60 @@
                 </li>
                 <!-- User Profile-->
                 <li class="sidebar-item">
-                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="#" aria-expanded="false">
+                    <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false">
+                        <i class="icon-Car-Wheel"></i>
+                        <span class="hide-menu">Slider </span>
+                    </a>
+                    <ul aria-expanded="false" class="collapse  first-level">
+                        <li class="sidebar-item">
+                            <a href="{{route('slider')}}" class="sidebar-link">
+                                <i class="icon-Record"></i>
+                                <span class="hide-menu"> Create </span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="{{route('view')}}" class="sidebar-link">
+                                <i class="icon-Record"></i>
+                                <span class="hide-menu"> View </span>
+                            </a>
+                        </li>
+
+
+                    </ul>
+                </li>
+
+                <li class="sidebar-item">
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{route('admin.about')}}" aria-expanded="false">
                         <i class="mdi mdi-content-paste"></i>
-                        <span class="hide-menu">Slider</span>
+                        <span class="hide-menu">About</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-item">
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{route('admin.site')}}" aria-expanded="false">
+                        <i class="mdi mdi-content-paste"></i>
+                        <span class="hide-menu">Site</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-item">
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{route('admin.contact')}}" aria-expanded="false">
+                        <i class="mdi mdi-content-paste"></i>
+                        <span class="hide-menu">Contact</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-item">
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{route('admin.donate')}}" aria-expanded="false">
+                        <i class="mdi mdi-content-paste"></i>
+                        <span class="hide-menu">Donate</span>
                     </a>
                 </li>
 
 
-                </nav>
+            </ul>
+
+        </nav>
         <!-- End Sidebar navigation -->
     </div>
     <!-- End Sidebar scroll-->

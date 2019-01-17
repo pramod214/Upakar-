@@ -7,7 +7,7 @@
 <section class="bgGrey sect-header text-wrap">
     <div class="row">
         <div class="col-xs-12">
-            <h1 class="colorGreen"> Photo Gallery</h1>
+            <h1 class="colorBlue"> Photo Gallery</h1>
 
         </div>
     </div>

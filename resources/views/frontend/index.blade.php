@@ -5,35 +5,20 @@
 @include('frontend.includes.nav')
 <section class="banner-wrap">
     <div class="slider fade ita-slider">
-        <div>
-            <img src="{{asset('public/front/img/1.jpg')}}" class="img-responsive" />
-            <div class="overlay"></div>
-            <div class="ita-caption hidden-xs hidden-sm">
-                <h1>About <span class="colorRed logo-title">CREATIVE ACTION</span> </h1>
-                <p>We provide homes to families living in slums in the developing world, fostering communities where families can thrive with safety, security, and access to the resources that change lives.</p>
-                <a href="#" class="btn btn-danger btn-big">MORE INFO</a>
+        @foreach($slider as $s)
+            <div>
+                <img src="{{asset('public/adminpanel/uploads/slider/'.$s->image)}}" class="img-responsive" />
+                <div class="overlay"></div>
+                <div class="ita-caption hidden-xs hidden-sm">
+                    <h1> <span class="colorRed logo-title">{{$s->name}}</span> </h1>
+                    <p>{!! htmlspecialchars_decode($s->body) !!}</p>
+
+                </div>
             </div>
-        </div>
-        <div>
-            <img src="{{asset('public/front/img/3.jpg')}}" class="img-responsive" />
-            <div class="overlay"></div>
-            <div class="ita-caption hidden-xs hidden-sm">
-                <h1>About <span class="colorRed logo-title">CREATIVE ACTION</span> </h1>
-                <p>We provide homes to families living in slums in the developing world, fostering communities where families can thrive with safety, security, and access to the resources that change lives.</p>
-                <a href="#" class="btn btn-danger btn-big">MORE INFO</a>
-            </div>
-        </div>
-        <div>
-            <img src="{{asset('public/front/img/2.jpg')}}" class="img-responsive" />
-            <div class="overlay"></div>
-            <div class="ita-caption hidden-xs hidden-sm">
-                <h1>About <span class="colorRed logo-title">CREATIVE ACTION</span> </h1>
-                <p>We provide homes to families living in slums in the developing world, fostering communities where families can thrive with safety, security, and access to the resources that change lives.</p>
-                <a href="#" class="btn btn-danger btn-big">MORE INFO</a>
-            </div>
-        </div>
+            @endforeach
+
     </div>
-</section>
+
 <section class="bgGrey sect-pad-top sect-pad-bottom text-center welcome-wrap">
     <div class="row">
         <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1">
@@ -149,6 +134,7 @@
         </div>
     </div>
 </section>
+
 
 @include('frontend.includes.footer')
 @include('frontend.includes.script')

@@ -6,7 +6,7 @@
 <section class="bgGrey sect-header text-wrap">
     <div class="row">
         <div class="col-xs-12">
-            <h1 class="colorGreen"> Contact Creative Action</h1>
+            <h1 class="colorBlue"> Contact {{$contact->name}}</h1>
 
         </div>
     </div>
@@ -14,25 +14,24 @@
 <section class="bgWhite sect-pad-top sect-pad-bottom text-wrap">
     <div class="row">
         <div class="col-xs-12">
-            <h4 class="sub-title">Headquartered in Katrhmandu, Nepal Creative Action a non-profit that provides homes for families living in slums in the Nepal. <br>
-                You can reach us via the info provided below, or feel free to leave us a message by completing the form. If you're looking to get involved as a employee or volunteer, follow the links.</h4>
+            <h4 class="sub-title">{!! htmlspecialchars_decode($contact->body) !!}</h4>
         </div>
         <div class="col-sm-4 mgtop20">
             <h4 class="colorBlue">Our Location</h4>
             <p class="address-list marker">
-                Kamladi, 44605 Kathmandu, Nepal
+               {{$contact->address}}
             </p>
         </div>
         <div class="col-sm-4 mgtop20">
-            <h4 class="colorBlue">Our Location</h4>
+            <h4 class="colorBlue">Email</h4>
             <p class="address-list email">
-                <a href="mailto:info@creativeaction.com" title="info@creativeaction.com">info@creativeaction.com</a>
+                <a href="mailto:info@creativeaction.com" title="{{$contact->email}}">{{$contact->email}}</a>
             </p>
         </div>
         <div class="col-sm-4 mgtop20">
-            <h4 class="colorBlue">Our Location</h4>
+            <h4 class="colorBlue">Phone</h4>
             <p class="address-list phone">
-                +977-01-442136
+                {{$contact->phone}}
             </p>
         </div>
     </div>

@@ -13,7 +13,7 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="{{route('front.index')}}">Home</a></li>
+                <li><a href="{{route('front.index')}}"><i class="ion-ios-home"></i></a></li>
                 <li class="dropdown">
                     <a href="{{route('front.about')}}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About <span class="ion-ios-arrow-down"></span></a>
                     <ul class="dropdown-menu">

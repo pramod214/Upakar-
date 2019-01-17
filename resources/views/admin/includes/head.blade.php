@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('public/adminpanel/assets/images/favicon.png')}}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('public/adminpanel/assets/images/logo1.jpg')}}">
     <title>Admin</title>
     <!-- Custom CSS -->
     <link href="{{asset('public/adminpanel/assets/libs/chartist/dist/chartist.min.css')}}" rel="stylesheet">
@@ -14,11 +14,14 @@
     <link href="{{asset('public/adminpanel/assets/libs/morris.js/morris.css')}}" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="{{asset('public/adminpanel/dist/css/style.min.css')}}" rel="stylesheet">
-@yield('style')
+    <link rel="stylesheet" href="{{asset('public/adminpanel/dist/css/toastr.css')}}">
+
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    @yield('style')
 </head>

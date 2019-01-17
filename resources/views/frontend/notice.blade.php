@@ -6,7 +6,7 @@
 <section class="bgGrey sect-header text-wrap">
     <div class="row">
         <div class="col-xs-12">
-            <h1 class="colorGreen"> Notice</h1>
+            <h1 class="colorBlue"> Notice</h1>
 
         </div>
     </div>

@@ -6,7 +6,7 @@
 <section class="bgGrey sect-header text-wrap">
     <div class="row">
         <div class="col-xs-12">
-            <h1 class="colorGreen"> News & Events</h1>
+            <h1 class="colorBlue"> News & Events</h1>
 
         </div>
     </div>

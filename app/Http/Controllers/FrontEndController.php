@@ -2,32 +2,49 @@
 
 namespace App\Http\Controllers;
 
+use App\About;
+use App\Contact;
+use App\Site;
 use Illuminate\Http\Request;
+use App\Slider;
+use App\Donate;
 
 class FrontEndController extends Controller
 {
     public function index(){
-        return view('frontend.index');
+        $site = Site::first();
+        $slider = Slider::all();
+        return view('frontend.index',compact('slider','site'));
     }
     public function about(){
-        return view('frontend.about');
+        $about = About::first();
+        $site = Site::first();
+        return view('frontend.about',compact('about','site'));
     }
     public function projects(){
-        return view('frontend.projects');
+        $site = Site::first();
+        return view('frontend.projects',compact('site'));
     }
     public function news(){
-        return view('frontend.news&events');
+        $site = Site::first();
+        return view('frontend.news&events',compact('site'));
     }
     public function notice(){
-        return view('frontend.notice');
+        $site = Site::first();
+        return view('frontend.notice',compact('site'));
     }
     public function photogallery(){
-        return view('frontend.photogallery');
+        $site = Site::first();
+        return view('frontend.photogallery',compact('site'));
     }
     public function contact(){
-        return view('frontend.contact');
+        $contact = Contact::first();
+        $site = Site::first();
+        return view('frontend.contact',compact('contact','site'));
     }
     public function donate(){
-        return view('frontend.donate');
+        $site = Site::first();
+        $donate = Donate::first();
+        return view('frontend.donate',compact('site','donate'));
     }
 }

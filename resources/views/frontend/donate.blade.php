@@ -6,7 +6,7 @@
 <section class="bgGrey sect-header text-wrap">
     <div class="row">
         <div class="col-xs-12">
-            <h1 class="colorGreen"> Donate Section</h1>
+            <h1 class="colorBlue"> Donate Section</h1>
 
         </div>
     </div>
@@ -14,13 +14,11 @@
 <section class="bgWhite sect-pad-top sect-pad-bottom text-wrap">
     <div class="row">
         <div class="col-md-8 col-md-offset-2 text-center">
-            <h4>Even your small Donation helps transform or rebuild someone's life or house.</h4>
-            <p class="text-muted">Your $10 will provide dinner for a family of 5 in nepal. See how you can change someone's life</p>
-            <h2 class="account-title">Creative Action</h2>
-            <p class="bank-title">HDFC Bank</p>
-            <p class="account-numb">0002-9286-5279</p>
-            <p class="bank-title">ICICI Bank</p>
-            <p class="account-numb">0002-9286-5279</p>
+            <h4>{!! htmlspecialchars_decode($donate->body) !!}</h4><br>
+            <h4 class="account-title">Organization Name:{{$donate->name}}</h4>
+            <h4 class="bank-title">Bank Name:{{$donate->bank_name}}</h4>
+            <h4 class="account-numb">Bank Account:{{$donate->bank_account}}</h4>
+
         </div>
     </div>
 </section>
