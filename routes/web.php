@@ -12,13 +12,19 @@
 */
 
 Route::get('/','FrontEndController@index')->name('front.index');
+Route::post('/mail/sendmail', 'MailController@sendmail')->name('sendmail.mail');
 Route::get('/about','FrontEndController@about')->name('front.about');
 Route::get('/projects','FrontEndController@projects')->name('front.projects');
 Route::get('/news&events','FrontEndController@news')->name('front.news&events');
 Route::get('/notice','FrontEndController@notice')->name('front.notice');
 Route::get('/photogallery','FrontEndController@photogallery')->name('front.photogallery');
 Route::get('/contact','FrontEndController@contact')->name('front.contact');
+Route::get('/member-form','FormController@member_form')->name('front.member_form');
+Route::get('/register', 'FormController@store')->name('front.store');
 Route::get('/donate','FrontEndController@donate')->name('front.donate');
+Route::get('/projectblog','FrontEndController@blog')->name('front.projectblog');
+
+
 
 Auth::routes();
 
@@ -53,6 +59,14 @@ Route::group(['middleware'=>['auth']],function(){
 //Donate Routes
     Route::get('/admin/donate','DonateController@donate')->name('admin.donate');
     Route::post('/admin/donate/update/{id}','DonateController@donate_update')->name('admin.donate.update');
+
+//Project Routes
+    Route::get('/admin/project/createProject','ProjectController@createProject')->name('createProject');
+    Route::post('/admin/project/storeProject','ProjectController@storeProject')->name('storeProject');
+    Route::get('/admin/project/viewProjects','ProjectController@viewProjects')->name('viewProjects');
+    Route::get('/admin/project/editProject/{id}','ProjectController@editProject')->name('editProject');
+    Route::post('/admin/project/updateProject/{id}','ProjectController@updateProject')->name('updateProject');
+    Route::get('/admin/delete-project/{id}','ProjectController@deleteProject')->name('deleteProject');
 
 });
 

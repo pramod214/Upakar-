@@ -1,8 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-@include('frontend.includes.head')
-<body class="container">
-@include('frontend.includes.nav')
+@extends('frontend.includes.frontend_design')
+
+@section('content')
 <section class="bgGrey sect-header text-wrap">
     <div class="row">
         <div class="col-xs-12">
@@ -37,9 +35,20 @@
     </div>
 </section>
 <section class="bgGrey sect-pad-top sect-pad-bottom text-wrap">
+
+    @if(Session::has('flashmessage'))
+        <div class="alert alert-danger">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            <strong>{{ Session::get('flashmessage')}}</strong>
+        </div>
+    @endif
+
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
-            <form class="row contact-form">
+            <form class="row contact-form" action="{{route('sendmail.mail')}}" method="post" role="form">
+
+                @csrf
+                <input type="hidden" name="sendemail" value="pramod.neupane21@gmail.com">
                 <div class="col-md-4">
                     <div class="form-group">
                         <input type="text" class="form-control" name="name_contact" placeholder="Full Name">
@@ -57,20 +66,16 @@
                 </div>
                 <div class="col-md-12">
                     <div class="form-group">
-                        <textarea rows="8" name="message_contact" class="form-control" placeholder="Your message"></textarea>
+                        <textarea rows="8" name="message" class="form-control" placeholder="Your message"></textarea>
                     </div>
                 </div>
                 <div class="col-md-12">
-                    <a href="#" class="btn btn-danger btn-big pull-right">SUBMIT</a>
+                    <input type="submit" name="submit" class="btn btn-danger btn-big pull-right" value="SUBMIT">
                 </div>
             </form>
         </div>
     </div>
 </section>
 
-@include('frontend.includes.footer')
-@include('frontend.includes.script')
 
-
-</body>
-</html>
+@endsection

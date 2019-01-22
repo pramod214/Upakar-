@@ -61,8 +61,6 @@
                                 <span class="hide-menu"> View </span>
                             </a>
                         </li>
-
-
                     </ul>
                 </li>
 
@@ -94,6 +92,26 @@
                     </a>
                 </li>
 
+                <li class="sidebar-item">
+                    <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false">
+                        <i class="icon-Car-Wheel"></i>
+                        <span class="hide-menu">Projects </span>
+                    </a>
+                    <ul aria-expanded="false" class="collapse  first-level">
+                        <li class="sidebar-item">
+                            <a href="{{route('createProject')}}" class="sidebar-link">
+                                <i class="icon-Record"></i>
+                                <span class="hide-menu"> Create Project </span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="{{route('viewProjects')}}" class="sidebar-link">
+                                <i class="icon-Record"></i>
+                                <span class="hide-menu"> View Projects</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
 
             </ul>
 

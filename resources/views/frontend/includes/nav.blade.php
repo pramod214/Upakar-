@@ -7,7 +7,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="{{route('front.index')}}">
                 <img src="{{asset('public/front/img/logo1.jpg')}}" alt="#">
             </a>
         </div>
@@ -24,6 +24,7 @@
                 <li><a href="{{route('front.projects')}}">Projects</a></li>
                 <li><a href="{{route('front.news&events')}}">News & Events</a></li>
                 <li><a href="{{route('front.notice')}}">Notice</a></li>
+
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gallery <span class="ion-ios-arrow-down"></span></a>
                     <ul class="dropdown-menu">
@@ -32,6 +33,7 @@
                     </ul>
                 </li>
                 <li><a href="{{route('front.contact')}}">Contact</a></li>
+                <li><a href="{{route('front.member_form')}}">Membership Form</a></li>
                 <li class="nav-btn"><a href="{{route('front.donate')}}">DONATE NOW</a></li>
             </ul>
         </div><!--/.nav-collapse -->

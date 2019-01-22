@@ -13,4 +13,5 @@
     <link rel="stylesheet" type="text/css" href="{{asset('public/front/css/slick.css')}}"/>
     <link rel="stylesheet" type="text/css" href="{{asset('public/front/css/custom-slick-theme.css')}}"/>
 
+
 </head>

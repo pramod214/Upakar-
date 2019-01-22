@@ -4,10 +4,13 @@ namespace App\Http\Controllers;
 
 use App\About;
 use App\Contact;
+use App\Form;
 use App\Site;
 use Illuminate\Http\Request;
 use App\Slider;
 use App\Donate;
+use App\Project;
+
 
 class FrontEndController extends Controller
 {
@@ -23,7 +26,8 @@ class FrontEndController extends Controller
     }
     public function projects(){
         $site = Site::first();
-        return view('frontend.projects',compact('site'));
+        $project = Project::latest()->paginate(3);
+        return view('frontend.projects',compact('project','site'));
     }
     public function news(){
         $site = Site::first();
@@ -42,9 +46,15 @@ class FrontEndController extends Controller
         $site = Site::first();
         return view('frontend.contact',compact('contact','site'));
     }
+
+
     public function donate(){
         $site = Site::first();
         $donate = Donate::first();
         return view('frontend.donate',compact('site','donate'));
+    }
+    public function blog(){
+        $site = Site::first();
+        return view('frontend.projectblog',compact('site'));
     }
 }

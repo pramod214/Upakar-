@@ -7,6 +7,7 @@
                 <li><a href="{{route('front.photogallery')}}">Photo Gallery</a></li>
                 <li><a href="video.html">Video Gallery</a></li>
                 <li><a href="{{route('front.contact')}}">Contact</a></li>
+                <li><a href="{{route('front.member_form')}}">Membership Form</a></li>
                 <li><a href="{{route('front.donate')}}">Donate</a></li>
             </ul>
         </div>
@@ -28,7 +29,7 @@
             </ul>
         </div>
         <div class="col-xs-12 footer-inner">
-            <span> ©2019 Upakar Foundation Nepal  All rights reserved, Designed &amp; Developed by <a title="IT Advisors Nepal" href="#">IT Advisors Nepal</a> </span>
+            <span> © <?php echo date('Y')?> <a href="{{route('front.index')}}">Upakar Foundation Nepal </a> </span>
         </div>
     </div>
 </footer>

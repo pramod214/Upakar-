@@ -28,78 +28,7 @@
         </div>
     </div>
 </section>
-<section>
-    <div class="row">
-        <div class="col-sm-12 col-lg-4">
-            <div class="notice-wrap">
-                <div class="notice-title">
-                    <h3>Latest Notice</h3>
-                </div>
-                <div class="notice-list">
-                    <ul class="list-unstyled mgbottom0">
-                        <li>
-                            <span class="date">14-10-2016</span>
-                            <p class="h4">
-                                <a href="#" title="">Meet the Community/Pro Bono Winner From Women in Media</a> </p>
-                        </li>
-                        <li>
-                            <span class="date">14-10-2016</span>
-                            <p class="h4">
-                                <a href="#" title="">Women Living In Poverty Celebrated As Entrepreneurs</a> </p>
-                        </li>
-                        <li>
-                            <span class="date">14-10-2016</span>
-                            <p class="h4">
-                                <a href="#" title="">A powerfull life-changing experience Nulla porttitor accumsan tincidunt nulla..</a> </p>
-                        </li>
-                        <li>
-                            <span class="date">14-10-2016</span>
-                            <p class="h4">
-                                <a href="#" title="">Nulla porttitor accumsan tincidunt nulla porttitor accumsan tincidunt estibulum</a> </p>
-                        </li>
-                    </ul>
-                    <p class="text-center mgbottom0">
-                        <a href="#" class="link">View All Notice</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-12 col-lg-8">
-            <div class="row project-row">
-                <a href="#">
-                    <div class="project-list">
-                        <div class="width-6 img-left">
-                            <img src="{{asset('public/front/img/p1.jpg')}}" alt="#" class="img-responsive">
-                        </div>
-                        <div class="width-6 pro-col-6">
-                            <div class="project-wrap">
-                                <h3 class="mgbottom20">Empowering Episcops and the next generation.</h3>
-                                <p>Proin ultricies elit a purus dapibus quis mollis mauris congue. Proin sit amet magna</p>
-                                <span class="btn btn-danger btn-big mgtop15">MORE INFO</span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="row project-row">
-                <a href="#">
-                    <div class="project-list">
-                        <div class="width-6">
-                            <div class="project-wrap pro-col-right-6 bgGrey-sm">
-                                <h3 class="mgbottom20">Empowering Episcops and the next generation.</h3>
-                                <p>Proin ultricies elit a purus dapibus quis mollis mauris congue. Proin sit amet magna</p>
-                                <span class="btn btn-danger btn-big mgtop15">MORE INFO</span>
-                            </div>
-                        </div>
-                        <div class="width-6 img-right">
-                            <img src="{{asset('public/front/img/p2.jpg')}}" alt="#" class="img-responsive">
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
+
 <section class="bgGrey sect-pad-top sect-pad-bottom">
     <div class="row">
         <h2 class="colorBlue text-center welcome-title">Latest News</h2>
@@ -187,5 +116,6 @@
         ]
     });
 </script>
+
 </body>
 </html>
