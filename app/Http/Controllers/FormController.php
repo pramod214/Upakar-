@@ -27,7 +27,8 @@ class FormController extends Controller
             $form->dob = $data['dob'];
             $form->email = $data['email'];
             $form->save();
-            return redirect()->back();
+            Session::flash('success','Thanks For Registration');
+            return redirect()->route('front.member_form');
         }
 
         public function view_form(){
@@ -38,6 +39,7 @@ class FormController extends Controller
         public function delete($id){
         $forms = Form::findOrFail($id);
         $forms ->delete();
+        Session::flash('danger','Member Deleted Successfully');
         return redirect()->route('admin.view_form');
         }
 

@@ -32,7 +32,7 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">View Sliders</h4>
+                        <h4 class="card-title">View Members</h4>
                         @if(Session::has('flash_message_danger'))
                             <div class="alert alert-danger alert-block">
                                 <button type="button" class="close" data-dismiss="alert">x</button>
@@ -108,17 +108,20 @@
                         confirmButtonText: "Yes, Delete it!"
                     },
                     function(){
-                        window.location.href="/upakar/frontend/"+deleteFunction+"/"+id;
+                        window.location.href="/upakar/admin/"+deleteFunction+"/"+id;
                     }
                 );
             });
         });
     </script>
 
-
-    @if(Session::has('danger'))
+    <script>
+        @if(Session::has('danger'))
         toastr.error('{{Session::get('danger')}}')
-    @endif
+        @endif
+    </script>
+
+
 
     @endsection
 

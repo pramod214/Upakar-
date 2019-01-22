@@ -7,12 +7,14 @@
         <div class="row">
             <!-- Offset means: Move columns to the right using the .col-md-offset-* classes. These classes increase the left margin of a column by * column -->
             <div class="col-md-10 col-md-offset-1">
+
                 @if(Session::has('flash_message_success'))
                     <div class="alert alert-success alert-block">
                         <button type="button" class="close" data-dismiss="alert">x</button>
                         <strong>{!! session('flash_message_success') !!}</strong>
                     </div>
                 @endif
+
                 <form method="post" action="{{route('front.store')}}" id="add_member">
                     @csrf
                     <div class="col-md-4">
@@ -70,10 +72,7 @@
 
 @section('script')
 
-
     <script src="{{asset('public/js/jquery.validate.js')}}"></script>
-
-
     <script type="text/javascript">
         $(document).ready(function(){
             $("#add_member").validate({
@@ -129,8 +128,12 @@
 
     </script>
 
-    @if(Session::has('success'))
-        toastr.success('{{Session::get('success')}}')
-    @endif
+        <script>
 
-    @endsection
+            @if(Session::has('success'))
+            toastr.success('{{Session::get('success')}}')
+            @endif
+
+        </script>
+
+@endsection

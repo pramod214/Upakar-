@@ -22,7 +22,7 @@ Route::get('/contact','FrontEndController@contact')->name('front.contact');
 Route::get('/member-form','FormController@member_form')->name('front.member_form');
 Route::post('/sendform', 'FormController@store')->name('front.store');
 Route::get('/view-form','FormController@view_form')->name('admin.view_form');
-Route::get('/delete-form/{id}','FormController@delete')->name('admin.delete');
+Route::get('admin/delete-form/{id}','FormController@delete')->name('admin.delete');
 Route::get('/donate','FrontEndController@donate')->name('front.donate');
 Route::get('/projectblog','FrontEndController@blog')->name('front.projectblog');
 
