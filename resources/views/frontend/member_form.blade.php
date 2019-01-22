@@ -7,7 +7,13 @@
         <div class="row">
             <!-- Offset means: Move columns to the right using the .col-md-offset-* classes. These classes increase the left margin of a column by * column -->
             <div class="col-md-10 col-md-offset-1">
-                <form method="post" action="{{route('front.member_form')}}" id="add_member">
+                @if(Session::has('flash_message_success'))
+                    <div class="alert alert-success alert-block">
+                        <button type="button" class="close" data-dismiss="alert">x</button>
+                        <strong>{!! session('flash_message_success') !!}</strong>
+                    </div>
+                @endif
+                <form method="post" action="{{route('front.store')}}" id="add_member">
                     @csrf
                     <div class="col-md-4">
                         <div class="form-group">
@@ -123,5 +129,8 @@
 
     </script>
 
+    @if(Session::has('success'))
+        toastr.success('{{Session::get('success')}}')
+    @endif
 
     @endsection

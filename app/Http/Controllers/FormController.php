@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 
 use App\Site;
 use Illuminate\Http\Request;
+use App\Form;
+use Session;
 
 class FormController extends Controller
 {
@@ -15,7 +17,6 @@ class FormController extends Controller
     }
 
     public function store(Request $request){
-
             $data = $request->all();
             $form = new Form();
             $form->name = ucwords(strtolower($data['name']));
@@ -27,6 +28,17 @@ class FormController extends Controller
             $form->email = $data['email'];
             $form->save();
             return redirect()->back();
+        }
+
+        public function view_form(){
+        $forms = Form::latest()->get();
+        return view('admin.memberform.index',compact('forms'));
+        }
+
+        public function delete($id){
+        $forms = Form::findOrFail($id);
+        $forms ->delete();
+        return redirect()->route('admin.view_form');
         }
 
 }

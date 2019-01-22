@@ -12,6 +12,7 @@
     <link href="{{asset('public/front/fonts/css.css')}}" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{asset('public/front/css/slick.css')}}"/>
     <link rel="stylesheet" type="text/css" href="{{asset('public/front/css/custom-slick-theme.css')}}"/>
+    <link rel="stylesheet" href="{{asset('public/adminpanel/dist/css/toastr.css')}}">
 
 
 </head>
