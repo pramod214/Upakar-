@@ -1,11 +1,16 @@
 @extends('frontend.includes.frontend_design')
 
 @section('content')
-    <section class="bgGrey sect-pad-top sect-pad-bottom text-wrap">
-
-
+    <section class="bgGrey sect-header text-wrap">
         <div class="row">
-            <!-- Offset means: Move columns to the right using the .col-md-offset-* classes. These classes increase the left margin of a column by * column -->
+            <div class="col-xs-12">
+                <h1 class="colorBlue"><u>Membership Form </u> </h1>
+
+            </div>
+        </div>
+    </section>
+    <section class="bgGrey sect-pad-top sect-pad-bottom text-wrap">
+        <div class="row">
             <div class="col-md-10 col-md-offset-1">
 
                 @if(Session::has('flash_message_success'))

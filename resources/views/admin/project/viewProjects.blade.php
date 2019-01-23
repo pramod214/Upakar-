@@ -66,6 +66,7 @@
                                     <th>S.N</th>
                                     <th>Date</th>
                                     <th>Title</th>
+                                    <th>Slug</th>
                                     <th>Description</th>
                                     <th>Image</th>
                                     <th>Actions</th>
@@ -77,6 +78,7 @@
                                         <td>{{$loop->index +1}}</td>
                                         <td>{{$p->date}}</td>
                                         <td>{{$p->title}}</td>
+                                        <td>{{$p->slug}}</td>
                                         <td>{{$p->description}}</td>
                                         <td>
                                             <img src="{{asset('public/adminpanel/uploads/project/'.$p->image)}}" alt="" width="200px">

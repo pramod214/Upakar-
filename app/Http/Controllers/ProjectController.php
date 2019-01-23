@@ -33,6 +33,7 @@ class ProjectController extends Controller
             $project->date = $data['date'];
             $project->title = ucwords($data['title']);
             $project->description = ucwords(strtolower($data['description']));
+            $project->slug = str_slug($data['title']);
             $project->save();
             Session::flash('success', 'Project Created Successfully');
             return redirect()->route('viewProjects');
@@ -67,6 +68,7 @@ class ProjectController extends Controller
             $project->date = $data['date'];
             $project->title = ucwords($data['title']);
             $project->description = ucwords(strtolower($data['description']));
+            $project->slug = str_slug($data['title']);
             $project->save();
             Session::flash('success', 'Project Updated Successfully');
             return redirect()->route('viewProjects');

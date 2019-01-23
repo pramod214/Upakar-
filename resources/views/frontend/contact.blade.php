@@ -23,7 +23,7 @@
         <div class="col-sm-4 mgtop20">
             <h4 class="colorBlue">Email</h4>
             <p class="address-list email">
-                <a href="mailto:info@creativeaction.com" title="{{$contact->email}}">{{$contact->email}}</a>
+                <a href="mailto:upakarfoundation01@gmail.com" title="{{$contact->email}}">{{$contact->email}}</a>
             </p>
         </div>
         <div class="col-sm-4 mgtop20">
@@ -76,6 +76,34 @@
         </div>
     </div>
 </section>
-
+<div id="map"></div>
 
 @endsection
+
+@section('style')
+    <link href="{{asset('public/css/map.css')}}" rel="stylesheet">
+    @endsection
+
+@section('script')
+    <script src="{{asset('public/js/js/gmap.js')}}"></script>
+    <script async defer src="{{asset('public/js/map.js')}}" type="text/javascript"></script>
+    <script type="text/javascript">
+        function initMap() {
+            var e = new google.maps.Map(document.getElementById("map"), {
+                center: {
+                    lat: 27.6515,
+                    lng:  85.3278
+                },
+                scrollwheel: !0,
+                scrollwheel: false,
+                zoom: 14
+            });
+            latLng = new google.maps.LatLng(27.6515,85.3278);
+            var a = new google.maps.Marker({
+                position: latLng,
+                visible: !0
+            });
+            a.setMap(e)
+        }
+    </script>
+    @endsection

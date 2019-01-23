@@ -18,9 +18,9 @@
                     <img src="{{asset('public/adminpanel/uploads/project/'.$pro->image)}}" alt="#" class="img-responsive">
                     <div class="news-caption">
                         <span class="date">{{$pro->date}}</span>
-                        <a href="#"><h4>{{$pro->title}}</h4></a>
+                        <a href="{{route('front.project_blog',$pro->slug)}}"><h4>{{$pro->title}}</h4></a>
                         <p>{{$pro->description}}</p>
-                        {{--<a href="#" title="" class="link">More Info...</a>--}}
+                        <a href="{{route('front.project_blog',$pro->slug)}}" title="" class="link">More Info...</a>
                     </div>
 
                 </div>

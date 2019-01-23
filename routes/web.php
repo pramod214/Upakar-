@@ -12,6 +12,8 @@
 */
 
 Route::get('/','FrontEndController@index')->name('front.index');
+
+Route::get('/projects/{slug}','FrontEndController@project_blog')->name('front.project_blog');
 Route::post('/mail/sendmail', 'MailController@sendmail')->name('sendmail.mail');
 Route::get('/about','FrontEndController@about')->name('front.about');
 Route::get('/projects','FrontEndController@projects')->name('front.projects');
@@ -24,7 +26,7 @@ Route::post('/sendform', 'FormController@store')->name('front.store');
 Route::get('/view-form','FormController@view_form')->name('admin.view_form');
 Route::get('admin/delete-form/{id}','FormController@delete')->name('admin.delete');
 Route::get('/donate','FrontEndController@donate')->name('front.donate');
-Route::get('/projectblog','FrontEndController@blog')->name('front.projectblog');
+
 
 
 

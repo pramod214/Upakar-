@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\About;
 use App\Contact;
-use App\Form;
 use App\Site;
 use Illuminate\Http\Request;
 use App\Slider;
@@ -46,15 +45,15 @@ class FrontEndController extends Controller
         $site = Site::first();
         return view('frontend.contact',compact('contact','site'));
     }
-
-
     public function donate(){
         $site = Site::first();
         $donate = Donate::first();
         return view('frontend.donate',compact('site','donate'));
     }
-    public function blog(){
+    public function project_blog($slug){
         $site = Site::first();
-        return view('frontend.projectblog',compact('site'));
+        $project_blogs = Project::findOrFail(['slug'=>$slug])->first();
+        return view('frontend.project_blog',compact('project_blogs','site'));
     }
+
 }
